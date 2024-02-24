@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 
 export default {
-  base: '/training with the database/',
+  base: '/training-with-the-database/',
   build: {
     rollupOptions: {
       input: {

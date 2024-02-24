@@ -3,12 +3,17 @@ import "./style.css"
 // Проба с сервером
 //========================================================================
 const field = document.querySelector('.register') as HTMLDivElement
-const allField = register.querySelectorAll('input') as NodeList
-const faren = register.querySelector('button')
+const email = document.querySelector('#email') as HTMLInputElement
+const passvord = document.querySelector('#passvord') as HTMLInputElement
+const faren = field.querySelector('button') as HTMLButtonElement
 
-if (allField[0] != '' && allField[1] != '') {
-  
-}
+  faren.onclick = function() {
+    if (email.value != '' && passvord.value != ''){
+
+    }
+  }
+
+
 
 //========================================================================
 // ПЯТНАШКИ
