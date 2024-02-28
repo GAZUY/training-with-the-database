@@ -7,9 +7,17 @@ const email = document.querySelector('#email') as HTMLInputElement
 const passvord = document.querySelector('#passvord') as HTMLInputElement
 const faren = field.querySelector('button') as HTMLButtonElement
 
-  faren.onclick = function() {
+  faren.onclick = async function() {
     if (email.value != '' && passvord.value != ''){
-
+      const result = await fetch('http://localhost:3000/add', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify({email:email.value, hash: passvord.value})
+      })
+      const data = await result.json()
+      console.log(data)
     }
   }
 
